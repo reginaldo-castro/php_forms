@@ -16,9 +16,12 @@
 
     <form action="send.php" method="POST">
         <input type="hidden" name="_csrf_token" value="<?php echo $_SESSION['csrf_token'] ?>">
-        <input type="nome" name="nome" placeholder="Nome"><br>
+        <input type="text" name="nome" placeholder="Nome"><br>
+        <input type="text" name="url" placeholder="Url"><br>
         <input type="email" name="email" placeholder="Email"><br>
         <textarea name="descricao" placeholder="Descrição"></textarea><br>
+        <img src="captcha.php">
+        <input type="text" name="_captcha" placeholder="Digite as letras acima">
         <input type="submit" value="Enviar">
     </form> 
 
